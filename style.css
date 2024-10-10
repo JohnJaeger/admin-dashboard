@@ -90,6 +90,11 @@ h6{
 	font-size: 1.5rem;
 }
 
+.username{
+    font-weight: 700;
+    display: block
+}
+
 .page-wrapper{
 	height: 100vh;
 	width: 100vw;
@@ -140,6 +145,58 @@ nav > ul > li{
 nav > ul > li:hover{
     font-size: 2.25rem;
     cursor: pointer;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 12px;
+    padding: 32px;
+}
+
+header > .header-top{
+    display: flex;
+    margin-bottom: auto;
+    padding-bottom: 16px;
+}
+
+header > .header-top > .header-top-left{
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+header > .header-top > .header-top-right{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+header > .header-bottom{
+    display: flex;
+    margin-top: auto;
+    padding-top: 16px;
+}
+
+header > .header-bottom > .header-bottom-left{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+header > .header-bottom > .header-bottom-right{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.header-bottom > .header-bottom-right > button{
+    width: 5rem;
+}
+
+.header-bottom > .header-bottom-right > button:not(:first-of-type){
+    margin-left: 16px;
 }
 
 main > h4{
@@ -208,10 +265,5 @@ main > .project-cards-wrapper > .project-card{
 
 .trending > :not(.user:last-of-type){
     padding-bottom: 16px;
-}
-
-.trending > .user > .username{
-    font-weight: 700;
-    display: block
 }
 
