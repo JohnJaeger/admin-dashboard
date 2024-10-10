@@ -68,3 +68,34 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word; /* Prevents overflow with long words */
 }
 /* End of reset */
+
+
+.page-wrapper{
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	grid-template: 1fr 4fr / 0.8fr 3fr 1.2fr;
+	grid-template-areas: "nav     header     header "
+						 "nav     main       sidebar";
+	gap: 15px;
+}
+
+.page-wrapper > nav{
+	grid-area: nav;
+	border: 1px solid black;
+}
+
+.page-wrapper > header{
+	grid-area: header;
+	border: 1px solid black;
+}
+
+.page-wrapper > main{
+	grid-area: main;
+	border: 1px solid black;
+}
+
+.page-wrapper > .sidebar{
+	grid-area: sidebar;
+	border: 1px solid black;
+}
