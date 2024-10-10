@@ -164,3 +164,54 @@ main > .project-cards-wrapper > .project-card{
 .project-card > h5{
     font-weight: 700;
 }
+
+.sidebar{
+    padding: 16px 32px 32px 32px;
+    border-top-left-radius: 12px;
+}
+
+.sidebar > aside:not(:first-of-type){
+    padding: 16px 0px 0px 0px;
+}
+
+.sidebar > aside > h4{
+    font-weight: 700;
+}
+
+.sidebar > aside > .announcements{
+    padding: 16px;
+    margin-top: 16px;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.announcements > :not(.announcement:first-of-type){
+    padding-top: 16px;
+}
+
+.announcements > :not(.announcement:last-of-type){
+    padding-bottom: 16px;
+    border-bottom: 1px solid black;
+}
+
+.announcements h6{
+    font-weight: 700;
+    min-width: max-content;
+}
+
+.sidebar > aside > .trending{
+    padding: 16px;
+    margin-top: 16px;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+
+.trending > :not(.user:last-of-type){
+    padding-bottom: 16px;
+}
+
+.trending > .user > .username{
+    font-weight: 700;
+    display: block
+}
+
