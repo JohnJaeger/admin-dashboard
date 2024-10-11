@@ -75,6 +75,11 @@ p, h1, h2, h3, h4, h5, h6 {
     --theme-color-2: #DFD3C3;
     --theme-color-3: #C7B198;
     --theme-color-4: #596E79;
+    --drop-shadow:  drop-shadow(1px 1px hsl(0deg 0% 0% / 0.075))
+                    drop-shadow(2px 2px 2px hsl(0deg 0% 0% / 0.075))
+                    drop-shadow(4px 4px 4px hsl(0deg 0% 0% / 0.075))
+                    drop-shadow(8px 8px 8px hsl(0deg 0% 0% / 0.075))
+                    drop-shadow(16px 16px 16px hsl(0deg 0% 0% / 0.075));
     --box-shadow:   1px 1px 1px hsl(0deg 0% 0% / 0.075),
                     2px 2px 2px hsl(0deg 0% 0% / 0.075),
                     4px 4px 4px hsl(0deg 0% 0% / 0.075),
@@ -105,6 +110,10 @@ h5{
 }
 h6{
 	font-size: 1.5rem;
+}
+
+svg{
+    display: inline-block;
 }
 
 .username{
@@ -151,8 +160,26 @@ h6{
     box-shadow: var(--box-shadow);
 }
 
-nav > h4{
+nav svg{
+    fill: var(--theme-color-3);
+}
+
+nav .icon-and-text-wrapper{
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: max-content;
+}
+
+nav > .icon-and-text-wrapper > svg{
+    width: 7rem;
+    fill: var(--theme-color-3);
+}
+
+nav > .icon-and-text-wrapper > h4{
     font-weight: 700;
+    margin-left: 2rem;
 }
 
 nav > ul{
@@ -167,7 +194,17 @@ nav > ul > li{
 nav > ul > li:hover{
     font-size: 2.25rem;
     cursor: pointer;
-    text-shadow: var(--box-shadow);;
+    filter: var(--drop-shadow);
+    text-shadow: var(--box-shadow);
+}
+
+nav > ul > li > svg{
+    width: 2em;
+}
+
+nav > ul > li > a{
+    font-size: inherit;
+    margin-left: 1rem;
 }
 
 header{
