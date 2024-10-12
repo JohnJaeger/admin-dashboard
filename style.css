@@ -276,14 +276,36 @@ main > .project-cards-wrapper{
 }
 
 main > .project-cards-wrapper > .project-card{
+    border-left: 8px solid var(--theme-color-3);
     border-radius: 12px;
     padding: 16px;
     background-color: var(--theme-color-2);
     box-shadow: var(--box-shadow-elevated);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card > h5{
     font-weight: 700;
+}
+
+.project-card > .project-card-icons-wrapper{
+    margin-top: auto;
+    margin-left: auto;
+}
+
+.project-card > .project-card-icons-wrapper > svg{
+    width: 2rem;
+}
+
+.project-card > .project-card-icons-wrapper > svg:hover{
+    cursor: pointer;
+    width: 2.25rem;
+    filter: var(--drop-shadow);
+}
+
+.project-card > .project-card-icons-wrapper > svg:not(:last-of-type){
+    margin-right: 0.75rem;
 }
 
 .sidebar{
