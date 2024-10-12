@@ -174,7 +174,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 nav svg{
-    fill: var(--theme-color-3);
+    fill: var(--theme-color-2);
 }
 
 nav .icon-and-text-wrapper{
@@ -187,12 +187,13 @@ nav .icon-and-text-wrapper{
 
 nav > .icon-and-text-wrapper > svg{
     width: 7rem;
-    fill: var(--theme-color-3);
+    fill: var(--theme-color-2);
 }
 
 nav > .icon-and-text-wrapper > h4{
     font-weight: 700;
     margin-left: 2rem;
+    color: var(--theme-color-2);
 }
 
 nav > ul{
