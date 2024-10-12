@@ -388,7 +388,22 @@ main > .project-cards-wrapper > .project-card{
     box-shadow: var(--box-shadow-elevated);
 }
 
+.trending > .user{
+    display: flex;
+}
+
 .trending > :not(.user:last-of-type){
     padding-bottom: 16px;
 }
 
+.trending > .user > img{
+    width: 4rem;
+    height: 4rem;
+}
+
+.trending > .user > .user-text-wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+    justify-content: center;
+}
