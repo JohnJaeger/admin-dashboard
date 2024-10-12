@@ -125,7 +125,7 @@ svg{
 	height: 100vh;
 	width: 100vw;
 	display: grid;
-	grid-template: 1fr 4fr / 0.8fr 3fr 1.2fr;
+	grid-template: 1fr 4fr / 0.8fr minmax(min-content, 3fr) 1.2fr;
 	grid-template-areas: "nav     header     header "
 						 "nav     main       sidebar";
 	gap: 15px;
@@ -222,14 +222,28 @@ header > .header-top{
 
 header > .header-top > .header-top-left{
     display: flex;
-    flex: 1;
-    justify-content: flex-start;
+    margin-right: auto;
 }
 
 header > .header-top > .header-top-right{
     display: flex;
-    flex: 1;
-    justify-content: flex-end;
+    margin-left: auto;
+    align-items: center;
+}
+
+.header-top > .header-top-right > svg{
+    width: 3rem;
+}
+
+.header-top > .header-top-right > img{
+    width: 4rem;
+    height: 4rem;
+    margin-left: 32px;
+}
+
+.header-top > .header-top-right > .username{
+    margin-left: 32px;
+    font-size: 1.5rem;
 }
 
 header > .header-bottom{
@@ -240,26 +254,49 @@ header > .header-bottom{
 
 header > .header-bottom > .header-bottom-left{
     display: flex;
+    margin-right: auto;
+    min-width: max-content;
+}
+
+.header-bottom > .header-bottom-left > img{
+    width: 7rem;
+    height: 7rem;
+}
+
+.header-bottom > .header-bottom-left > .header-bottom-left-text-wrapper{
+    display: flex;
     flex-direction: column;
-    flex: 1;
-    justify-content: flex-start;
+    justify-content: center;
+    margin-left: 32px;
+}
+
+.header-bottom > .header-bottom-left > .header-bottom-left-text-wrapper > p{
+    font-size: 1.5rem;
 }
 
 header > .header-bottom > .header-bottom-right{
     display: flex;
-    flex: 1;
-    justify-content: flex-end;
+    margin-left: auto;
+    align-items: center;
 }
 
 .header-bottom > .header-bottom-right > button{
-    width: 5rem;
+    width: 9rem;
+    height: 5rem;
+    font-size: 1.5rem;
+    margin-left: 32px;
     border: none;
+    border-radius: 24px;
     background-color: var(--theme-color-2);
     box-shadow: var(--box-shadow);
 }
 
-.header-bottom > .header-bottom-right > button:not(:first-of-type){
-    margin-left: 16px;
+.header-bottom > .header-bottom-right > button:hover{
+    width: 10.125rem; /*Calculated as default width * 1.125 which is consistent with what has been used for hover effects across the entire page*/
+    height: 5.625rem; /*Calculated as default height * 1.125 which is consistent with what has been used for hover effects across the entire page*/
+    cursor: pointer;
+    box-shadow: var(--box-shadow-elevated); /*An element that is "moving out of the page" should have a bigger and more blurry shadow.
+                                                This makes for a more realistic illusion*/
 }
 
 main > h4{
