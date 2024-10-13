@@ -319,6 +319,7 @@ header > .header-top > .header-top-left{
     padding-left: 48px;
     padding-right: 32px;
     border-radius: 24px;
+    font-size: 1.25rem;
 }
 
 .header-top > .header-top-left > input[type="search"]:focus{
