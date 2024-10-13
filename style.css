@@ -217,6 +217,10 @@ input[type="search"]::-webkit-search-results-decoration {
 	grid-area: header;
     background-color: var(--theme-color-3);
     box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    border-bottom-left-radius: 12px;
+    padding: 32px;
 }
 
 .page-wrapper > main{
@@ -282,13 +286,6 @@ nav > ul > li > svg{
 nav > ul > li > a{
     font-size: inherit;
     margin-left: 1rem;
-}
-
-header{
-    display: flex;
-    flex-direction: column;
-    border-bottom-left-radius: 12px;
-    padding: 32px;
 }
 
 header > .header-top{
